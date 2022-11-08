@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+$maincolor: #5D62B5;
+$buttonColor: #F2726F;
+
+body {
+    background-color: #333;
+}
+
+.form {
+
+    &__box {
+        font-family: 'Roboto';
+        max-width: 585px;
+        margin: 0 auto;
+        margin-top: 30px; //НЕПРАВИЛЬНО
+        padding: 76px 57.5px;
+        background-color: $maincolor;
+        border-radius: 40px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 36px;
+        color: white;
+        font-weight: 900;
+        line-height: 1.17;
+        margin-bottom: 43px;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 22px;
+        column-gap: 22px;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+
+    &__input {
+        border: 2px solid white;
+        border-radius: 10px;
+        flex: 1 1 25%;
+        padding: 17px 23.5px 15px;
+        background-color: $maincolor;
+        font-size: 16px;
+        color: white;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__text-area {
+        // margin: 0 auto;
+        margin-bottom: 30px;
+        // text-align: center;
+        display: flex;
+    }
+
+
+    &__text-item {
+        flex: 1 1 auto;
+        resize: none;
+        // max-width: 535px;
+        // min-width: 535px;
+        min-height: 180px;
+        background-color: $maincolor;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        padding: 17px 23px;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__replace {
+        text-align: right;
+    }
+
+    &__btn {
+        cursor: pointer;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 2;
+        color: white;
+        background-color: $buttonColor;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 33px;
+        transition: all 250ms;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: rgb(107, 85, 128)
+        }
+    }
+}
